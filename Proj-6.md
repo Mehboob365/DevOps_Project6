@@ -60,4 +60,9 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
    
      ![image](https://user-images.githubusercontent.com/67065306/132771572-e5a1d0b5-5f42-471a-a8ae-11d0be255732.png)
 
-  
+ 6. Will install lvm2 package using sudo yum install lvm2. 
+    
+     ![image](https://user-images.githubusercontent.com/67065306/132772267-6bee1afc-51d0-4c18-a97f-81dd2629b715.png)
+     ![image](https://user-images.githubusercontent.com/67065306/132772329-725225df-71ec-42f3-a0e3-3b8a74967c84.png)
+
+    Run sudo lvmdiskscan command to check for available partitions.
