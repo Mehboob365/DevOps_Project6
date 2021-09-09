@@ -42,9 +42,22 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
   
     ![image](https://user-images.githubusercontent.com/67065306/132767999-6f44d028-47b8-40ed-be77-b651b1754cc3.png)
 
+4. Use df -h command to see all mounts and free space on the web server
+    
+    ![image](https://user-images.githubusercontent.com/67065306/132769092-0f3e8594-1d9d-4113-b787-d94a1fe6a393.png)
+
+5. We will use gdisk utility to create a single partition on each of the 3 disks
+
+   sudo gdisk /dev/xvdf  then 
    
+   sudo gdisk /dev/xvdg  then 
+   
+     ![image](https://user-images.githubusercontent.com/67065306/132771357-63618978-f8e1-4ecc-8f6e-506bb4ab3d5f.png)
 
+     ![image](https://user-images.githubusercontent.com/67065306/132770983-a518548e-3951-4093-93ed-c6bdd4f610b1.png)
 
+   sudo gdisk /dev/xvdh
+   
+     ![image](https://user-images.githubusercontent.com/67065306/132771572-e5a1d0b5-5f42-471a-a8ae-11d0be255732.png)
 
-
-
+  
