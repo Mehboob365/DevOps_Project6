@@ -65,4 +65,17 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
      ![image](https://user-images.githubusercontent.com/67065306/132772267-6bee1afc-51d0-4c18-a97f-81dd2629b715.png)
      ![image](https://user-images.githubusercontent.com/67065306/132772329-725225df-71ec-42f3-a0e3-3b8a74967c84.png)
 
-    Run sudo lvmdiskscan command to check for available partitions.
+   Run sudo lvmdiskscan command to check for available partitions.
+   
+    ![image](https://user-images.githubusercontent.com/67065306/132773530-679165fd-f784-435d-871c-5004a0ae1567.png)
+
+ 7. We will Use pvcreate utility to mark each of 3 disks as physical volumes (PVs) to be used by LVM.
+   
+    sudo pvcreate /dev/xvdf1
+    
+    sudo pvcreate /dev/xvdg1
+    
+    sudo pvcreate /dev/xvdh1
+    
+    
+    
