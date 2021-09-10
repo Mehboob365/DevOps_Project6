@@ -87,4 +87,21 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
     
     ![image](https://user-images.githubusercontent.com/67065306/132878424-8d849639-1472-44e2-ac07-0c25d3a78c3e.png)
 
-    
+ 9. Use vgcreate utility to add all 3 PVs to a volume group (VG). Name the VG webdata-vg
+
+      sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1
+      
+    ![image](https://user-images.githubusercontent.com/67065306/132879077-b6c7a665-a53a-4a47-a60b-a9d09789f8d2.png)
+
+ 10. Verify that your VG has been created successfully by running sudo vgs
+ 
+     ![image](https://user-images.githubusercontent.com/67065306/132879434-a3106bbf-7c31-4b22-8877-c4d5c2a6dc94.png)
+     
+     
+     
+     
+
+ 
+     
+
+
