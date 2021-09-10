@@ -113,6 +113,16 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
    ![image](https://user-images.githubusercontent.com/67065306/132881065-9c4298e1-6684-417e-b8ea-22c1160edb79.png)
 
 
+ 13. Verify the entire setup
+
+      sudo vgdisplay -v #view complete setup - VG, PV, and LV
+      
+   ![image](https://user-images.githubusercontent.com/67065306/132881471-c1952c78-cff2-41f9-9dfd-55ff2e0160cf.png)
+
+      sudo lsblk 
+    
+    ![image](https://user-images.githubusercontent.com/67065306/132881594-5b46c846-2870-4f50-b01c-b6b2e8ea5e5f.png)
+
  
      
 
