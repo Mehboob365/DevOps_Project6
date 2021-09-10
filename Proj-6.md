@@ -161,6 +161,45 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
 
    ![image](https://user-images.githubusercontent.com/67065306/132924257-9a2d5e8a-cd69-47ea-ac04-32949cd59bcb.png)
    
-   
+ 19. We will mount /var/log on logs-lv logical volume. (Note that all the existing data on /var/log will be deleted. 
+    That is why step 15 above is very important)
+    
+       sudo mount /dev/webdata-vg/logs-lv /var/log
+     
+    ![image](https://user-images.githubusercontent.com/67065306/132924531-0d5f5bf0-b07f-48dc-ad8e-4b040ffecd5c.png)
+    
+ 20. Restore log files back into /var/log directory
+
+       sudo rsync -av /home/recovery/logs/log/. /var/log
+
+   ![image](https://user-images.githubusercontent.com/67065306/132924926-5bbd7b0c-5820-4a25-bd6c-06928eb38d8f.png)
+
+
+ 21. We will update /etc/fstab file so that the mount configuration will persist after restart of the server.
+ 
+      UPDATE THE `/ETC/FSTAB` FILE
+      
+      The UUID of the device will be used to update the /etc/fstab file;
+
+          sudo blkid
+   ![image](https://user-images.githubusercontent.com/67065306/132925151-3bd28da8-aaff-439a-81f1-6f8511ec3d8e.png)
+  
+    sudo vi /etc/fstab
+
+   We will update /etc/fstab in this format using your own UUID and rememeber to remove the leading and ending quotes.
+
+   ![image](https://user-images.githubusercontent.com/67065306/132925996-9d6d6cad-72e5-46ac-9594-9461f075f618.png)
+
+   1. We will test the configuration and reload the daemon
+
+      sudo mount -a
+      
+      sudo systemctl daemon-reload
+
+  ![image](https://user-images.githubusercontent.com/67065306/132926144-f6a81239-1d2e-48e9-957e-2afdf68450c7.png)
+     
+   2. We will verify our setup by running df -h, output must look like this:
+     
+  ![image](https://user-images.githubusercontent.com/67065306/132926330-19d51e21-dfda-4676-93a6-c014f66d7a9f.png)
 
 
