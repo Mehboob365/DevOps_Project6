@@ -69,7 +69,7 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
      ![image](https://user-images.githubusercontent.com/67065306/132876517-a36acc32-13fa-4557-a359-25dce53ac69c.png)
 
    We run finally run, lsblk to see our configuration;
-   
+  
     ![image](https://user-images.githubusercontent.com/67065306/132877580-6076755a-0c2f-496c-b3c9-9fe2b4a2c792.png)
     
    
@@ -97,9 +97,21 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
  
      ![image](https://user-images.githubusercontent.com/67065306/132879434-a3106bbf-7c31-4b22-8877-c4d5c2a6dc94.png)
      
+ 11.  Use lvcreate utility to create 2 logical volumes. apps-lv (Use half of the PV size), and logs-lv Use the remaining space of the PV size. 
+      NOTE: apps-lv will be used to store data for the Website while, logs-lv will be used to store data for logs.
+      
+     sudo lvcreate -n apps-lv -L 14G webdata-vg
      
+     sudo lvcreate -n logs-lv -L 14G webdata-vg
      
-     
+   ![image](https://user-images.githubusercontent.com/67065306/132880012-6d1f461a-c7d7-4f78-be17-4401c55892ee.png)
+
+  12.   We verify that our Logical Volume has been created successfully by running 
+        
+        sudo lvs
+
+   ![image](https://user-images.githubusercontent.com/67065306/132881065-9c4298e1-6684-417e-b8ea-22c1160edb79.png)
+
 
  
      
