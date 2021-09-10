@@ -52,22 +52,22 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
    
    sudo gdisk /dev/xvdg  then 
    
-     ![image](https://user-images.githubusercontent.com/67065306/132771357-63618978-f8e1-4ecc-8f6e-506bb4ab3d5f.png)
-
-     ![image](https://user-images.githubusercontent.com/67065306/132770983-a518548e-3951-4093-93ed-c6bdd4f610b1.png)
+     ![image](https://user-images.githubusercontent.com/67065306/132874875-ed5044f1-f55b-428b-91a0-face95841222.png)
 
    sudo gdisk /dev/xvdh
    
-     ![image](https://user-images.githubusercontent.com/67065306/132771572-e5a1d0b5-5f42-471a-a8ae-11d0be255732.png)
+    ![image](https://user-images.githubusercontent.com/67065306/132875889-a8a5d3fc-8939-4387-bef0-ad6e6b629449.png)
+
 
  6. Will install lvm2 package using sudo yum install lvm2. 
     
      ![image](https://user-images.githubusercontent.com/67065306/132772267-6bee1afc-51d0-4c18-a97f-81dd2629b715.png)
      ![image](https://user-images.githubusercontent.com/67065306/132772329-725225df-71ec-42f3-a0e3-3b8a74967c84.png)
 
-   Run sudo lvmdiskscan command to check for available partitions.
+     Next, Run sudo lvmdiskscan command to check for available partitions.
    
-    ![image](https://user-images.githubusercontent.com/67065306/132773530-679165fd-f784-435d-871c-5004a0ae1567.png)
+     ![image](https://user-images.githubusercontent.com/67065306/132876517-a36acc32-13fa-4557-a359-25dce53ac69c.png)
+
 
  7. We will Use pvcreate utility to mark each of 3 disks as physical volumes (PVs) to be used by LVM.
    
