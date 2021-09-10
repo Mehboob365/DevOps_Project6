@@ -68,7 +68,11 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
    
      ![image](https://user-images.githubusercontent.com/67065306/132876517-a36acc32-13fa-4557-a359-25dce53ac69c.png)
 
-
+   We run finally run, lsblk to see our configuration;
+   
+    ![image](https://user-images.githubusercontent.com/67065306/132877580-6076755a-0c2f-496c-b3c9-9fe2b4a2c792.png)
+    
+   
  7. We will Use pvcreate utility to mark each of 3 disks as physical volumes (PVs) to be used by LVM.
    
     sudo pvcreate /dev/xvdf1
@@ -77,5 +81,10 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
     
     sudo pvcreate /dev/xvdh1
     
+    ![image](https://user-images.githubusercontent.com/67065306/132878284-50b19d79-e610-42c9-99bd-194ac788538a.png)
     
+ 8. Verify that your Physical volume has been created successfully by running sudo pvs
+    
+    ![image](https://user-images.githubusercontent.com/67065306/132878424-8d849639-1472-44e2-ac07-0c25d3a78c3e.png)
+
     
