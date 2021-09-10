@@ -124,6 +124,13 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
     ![image](https://user-images.githubusercontent.com/67065306/132881594-5b46c846-2870-4f50-b01c-b6b2e8ea5e5f.png)
 
  
-     
+  14. We will use mkfs.ext4 to format the logical volumes with ext4 filesystem
 
+        sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
+        
+     ![image](https://user-images.githubusercontent.com/67065306/132923159-cec8301f-36a9-43e3-b3d8-4688eb6ab2f6.png)
+
+        sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
+
+     ![image](https://user-images.githubusercontent.com/67065306/132923264-6f4366cf-8fca-4175-806a-c363026f1a5f.png)
 
