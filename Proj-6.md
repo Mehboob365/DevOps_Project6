@@ -128,9 +128,39 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
 
         sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
         
-     ![image](https://user-images.githubusercontent.com/67065306/132923159-cec8301f-36a9-43e3-b3d8-4688eb6ab2f6.png)
+   ![image](https://user-images.githubusercontent.com/67065306/132923159-cec8301f-36a9-43e3-b3d8-4688eb6ab2f6.png)
+     
 
-        sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
+         sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
+        
+   ![image](https://user-images.githubusercontent.com/67065306/132923386-d2152209-5feb-4485-8700-b3dae7b85190.png)
+ 
+ 
+ 15. We will create /var/www/html directory to store website files
 
-     ![image](https://user-images.githubusercontent.com/67065306/132923264-6f4366cf-8fca-4175-806a-c363026f1a5f.png)
+      sudo mkdir -p /var/www/html
+   
+   ![image](https://user-images.githubusercontent.com/67065306/132923686-ff2c7a83-54cd-4e90-bd0d-19635c235f32.png)
+
+16. We will create /home/recovery/logs to store backup of log data
+
+       sudo mkdir -p /home/recovery/logs
+      
+   ![image](https://user-images.githubusercontent.com/67065306/132923803-343472ec-6124-48c4-bbdf-e89d48b206cd.png)
+   
+   
+ 17. We will mount /var/www/html on apps-lv logical volume
+
+         sudo mount /dev/webdata-vg/apps-lv /var/www/html/
+ 
+    ![image](https://user-images.githubusercontent.com/67065306/132924133-449ace27-9117-40c0-99fa-1b924d50b093.png)
+    
+  18. We use rsync utility to backup all the files in the log directory /var/log into /home/recovery/logs (This is required before mounting the file system)
+
+         sudo rsync -av /var/log/. /home/recovery/logs/
+
+   ![image](https://user-images.githubusercontent.com/67065306/132924257-9a2d5e8a-cd69-47ea-ac04-32949cd59bcb.png)
+   
+   
+
 
