@@ -203,3 +203,12 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
   ![image](https://user-images.githubusercontent.com/67065306/132926330-19d51e21-dfda-4676-93a6-c014f66d7a9f.png)
 
 
+
+**Step 2 — Prepare the Database Server**
+
+ We will launch a second RedHat EC2 instance that will have a role – ‘DB Server’
+
+ Repeat the same steps as for the Web Server, but instead of apps-lv create db-lv and mount it to /db directory instead of /var/www/html/.
+ 
+ 
+
