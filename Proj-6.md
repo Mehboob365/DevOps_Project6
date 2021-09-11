@@ -281,4 +281,18 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
       
       ![image](https://user-images.githubusercontent.com/67065306/132957477-6996d504-3bbf-421c-b1c2-46b976ea856f.png)
 
- 12. 
+ 12. We will update /etc/fstab file so that the mount configuration will persist after restart of the server.
+ 
+      The UUID of the device will be used to update the /etc/fstab file;
+
+          sudo blkid
+          
+   ![image](https://user-images.githubusercontent.com/67065306/132959201-f32ba476-cbed-45cb-ac33-81d4b8d5cfb3.png)
+
+    sudo vi /etc/fstab
+
+   We will update /etc/fstab in this format using your own UUID and rememeber to remove the leading and ending quotes.
+   
+   ![image](https://user-images.githubusercontent.com/67065306/132959311-1c902538-daec-452f-a3cd-322aa578afd7.png)
+
+   
