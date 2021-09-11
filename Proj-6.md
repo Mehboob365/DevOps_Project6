@@ -318,9 +318,24 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
          
   ![image](https://user-images.githubusercontent.com/67065306/132959759-6d2cc7ae-c237-45bb-b4f0-40e6b51cc835.png)
 
-   2. Install wget, Apache and it’s dependencies
+   2. Install wget, Apache and it’s dependencies on web server.
 
          sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json
    
+   ![image](https://user-images.githubusercontent.com/67065306/132960833-3d0a8b5f-0e17-4637-a340-7118456f5c80.png)
+   
+   
+   3. **First install the epel repository.**
+   
+   
+   
+   3. Start Apache
+   
+       sudo systemctl enable httpd
+       
+       sudo systemctl start httpd
+   
+   
+
    
    
