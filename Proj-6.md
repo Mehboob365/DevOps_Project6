@@ -206,15 +206,15 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
 
 **Step 2 — Prepare the Database Server**
 
- We will launch a second RedHat EC2 instance that will have a role – ‘DB Server’
+ 1. We will launch a second RedHat EC2 instance that will have a role – ‘DB Server’
 
  Repeat the same steps as for the Web Server, but instead of apps-lv create db-lv and mount it to /db directory instead of /var/www/html/.
  
- We will create the 3 volumes for the dbserver, as detailed below.
+ 2. We will create the 3 volumes for the dbserver, as detailed below.
  
  ![image](https://user-images.githubusercontent.com/67065306/132951974-545e668c-5af7-4cda-ad6d-6a59a5ac1e19.png)
  
- We will use gdisk utility to create a single partition on each of the 3 disks
+ 3. We will use gdisk utility to create a single partition on each of the 3 disks
 
   sudo gdisk /dev/xvdf then sudo gdisk /dev/xvdf then sudo gdisk /dev/xvdf
   
@@ -222,20 +222,35 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
 
  ![image](https://user-images.githubusercontent.com/67065306/132952192-560055f7-b1d2-4071-822d-f2fdc73eab1d.png)
  
- We will next install lvm2 package using 
+ 4. We will next install lvm2 package using 
  
     sudo yum install lvm2
  
  ![image](https://user-images.githubusercontent.com/67065306/132952448-adda4770-170a-487b-9be7-679fbdcdb651.png)
 
- Next, will Use pvcreate utility to mark each of 3 disks as physical volumes (PVs) to be used by LVM
+  5. Next, will Use pvcreate utility to mark each of 3 disks as physical volumes (PVs) to be used by LVM
+      
+      sudo pvcreate /dev/xvdf1 /dev/xvdg1 /dev/xvdh1
  
   ![image](https://user-images.githubusercontent.com/67065306/132952572-e9b62308-c0e2-4e27-9192-559e6692d0c3.png)
   
- We then run, lsblk to see our configuration;
- 
-   ![image](https://user-images.githubusercontent.com/67065306/132952777-6ed119f8-9a33-4b3d-9b92-1cc55ff620b4.png)
 
+ 6. We will Use pvcreate utility to mark each of 3 disks as physical volumes (PVs) to be used by LVM.
    
+    sudo pvcreate /dev/xvdf1
+    
+    sudo pvcreate /dev/xvdg1
+    
+    sudo pvcreate /dev/xvdh1
+    
+   ![image](https://user-images.githubusercontent.com/67065306/132956560-5aac2b2c-5e4f-40bb-8722-5f7bf2ac650a.png)
+
+ 7. We then run, lsblk to see our configuration followed by sudo pvs.
+     
+   ![image](https://user-images.githubusercontent.com/67065306/132956482-316e15ef-9f5c-4015-9d9d-6f03da58b87f.png)
+    
+  8. Use vgcreate utility to add all 3 PVs to a volume group (VG). Name the VG webdata-vg
+
+      sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1
 
 
