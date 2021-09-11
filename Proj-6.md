@@ -302,5 +302,25 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
    ![image](https://user-images.githubusercontent.com/67065306/132959370-ac8fa0f2-dc5b-4520-aa47-a60aa9036440.png)
 
    
+   **Step 3 — Install WordPress on your Web Server EC2**
+   
+   1. We will update the repository on both the webserver and database server.
+
+         on database server run,
+         
+         sudo yum -y update 
+         
+ ![image](https://user-images.githubusercontent.com/67065306/132959711-04189b54-66b9-4460-a120-0d97c7f37eeb.png)
+
+         On webserver run
+         
+         sudo yum -y update
+         
+  ![image](https://user-images.githubusercontent.com/67065306/132959759-6d2cc7ae-c237-45bb-b4f0-40e6b51cc835.png)
+
+   2. Install wget, Apache and it’s dependencies
+
+         sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json
+   
    
    
