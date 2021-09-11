@@ -187,8 +187,9 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
     sudo vi /etc/fstab
 
    We will update /etc/fstab in this format using your own UUID and rememeber to remove the leading and ending quotes.
+   
+   ![image](https://user-images.githubusercontent.com/67065306/132950939-d45f2fc4-76e9-46ca-b2a7-c6f0ee6d21a2.png)
 
-   ![image](https://user-images.githubusercontent.com/67065306/132925996-9d6d6cad-72e5-46ac-9594-9461f075f618.png)
 
    1. We will test the configuration and reload the daemon
 
@@ -199,9 +200,8 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
   ![image](https://user-images.githubusercontent.com/67065306/132926144-f6a81239-1d2e-48e9-957e-2afdf68450c7.png)
      
    2. We will verify our setup by running df -h, output must look like this:
-     
-  ![image](https://user-images.githubusercontent.com/67065306/132926330-19d51e21-dfda-4676-93a6-c014f66d7a9f.png)
 
+  ![image](https://user-images.githubusercontent.com/67065306/132951028-69bc135c-be50-46b3-9c8e-27f95dd3e72e.png)
 
 
 **Step 2 — Prepare the Database Server**
