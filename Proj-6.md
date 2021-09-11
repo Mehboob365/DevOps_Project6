@@ -294,5 +294,11 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
    We will update /etc/fstab in this format using your own UUID and rememeber to remove the leading and ending quotes.
    
    ![image](https://user-images.githubusercontent.com/67065306/132959311-1c902538-daec-452f-a3cd-322aa578afd7.png)
+  
+   We will show some disk space stats by running
+   
+      df -h![image](https://user-images.githubusercontent.com/67065306/132959370-ac8fa0f2-dc5b-4520-aa47-a60aa9036440.png)
 
+   
+   
    
