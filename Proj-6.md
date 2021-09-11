@@ -251,6 +251,23 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
     
   8. Use vgcreate utility to add all 3 PVs to a volume group (VG). Name the VG webdata-vg
 
-      sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1
+      sudo vgcreate vg-database /dev/xvdf1 /dev/xvdg1 /dev/xvdh1
+      
+      to check, we run the following
+      
+      sudo vgs
 
+    ![image](https://user-images.githubusercontent.com/67065306/132956916-b1e3d4ae-d8be-4d3e-a2be-fe07c5a2087c.png)
+    
+  9. Next, we use lvcreate utility to create a logical volume
+     
+        sudo lvcreate -n db-lv -L 20G vg-database
+      
+     We verify that our Logical Volume has been created successfully by running 
 
+       sudo lvs
+     
+    ![image](https://user-images.githubusercontent.com/67065306/132957254-3c219504-000e-4423-a73a-5f9a4e534ebd.png)
+
+  10. 
+  
