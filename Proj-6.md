@@ -297,7 +297,9 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
   
    We will show some disk space stats by running
    
-      df -h![image](https://user-images.githubusercontent.com/67065306/132959370-ac8fa0f2-dc5b-4520-aa47-a60aa9036440.png)
+      df -h
+      
+   ![image](https://user-images.githubusercontent.com/67065306/132959370-ac8fa0f2-dc5b-4520-aa47-a60aa9036440.png)
 
    
    
