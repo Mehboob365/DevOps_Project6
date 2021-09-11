@@ -211,4 +211,5 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
  Repeat the same steps as for the Web Server, but instead of apps-lv create db-lv and mount it to /db directory instead of /var/www/html/.
  
  
+ 
 
