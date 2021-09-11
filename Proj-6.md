@@ -269,5 +269,16 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
      
     ![image](https://user-images.githubusercontent.com/67065306/132957254-3c219504-000e-4423-a73a-5f9a4e534ebd.png)
 
-  10. 
-  
+  10. We will use mkfs.ext4 to format the logical volumes with ext4 filesystem
+
+        sudo mkfs.ext4 /dev/vg-database/db-lv
+        
+    ![image](https://user-images.githubusercontent.com/67065306/132957391-8205569d-b2bc-4005-a269-3c842004a872.png)
+
+  11. We will mount /dev/vg-database/db-lv on /db logical volume.
+    
+       sudo mount /dev/vg-database/db-lv /db
+      
+      ![image](https://user-images.githubusercontent.com/67065306/132957477-6996d504-3bbf-421c-b1c2-46b976ea856f.png)
+
+ 12. 
