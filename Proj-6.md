@@ -388,7 +388,8 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
        
        sudo systemctl status php-fpm
        
-    ![image](https://user-images.githubusercontent.com/67065306/132988233-e8a633b0-9ac2-4c64-b1ff-0aebf48c9a2d.png)
+ ![image](https://user-images.githubusercontent.com/67065306/132988233-e8a633b0-9ac2-4c64-b1ff-0aebf48c9a2d.png)
+ 
 
 
   
