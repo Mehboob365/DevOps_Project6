@@ -430,11 +430,35 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
 
     d. sudo tar xzvf latest.tar.gz
     
+   ![image](https://user-images.githubusercontent.com/67065306/132989823-8c2a422f-e632-4a74-bdfb-9b6c185c1d04.png)
+
     e. sudo rm -rf latest.tar.gz
     
-    f. cp wordpress/wp-config-sample.php wordpress/wp-config.php
+    f. cd wordpress, then 
+        
+       sudo cp -R wp-config-sample.php wp-config.php
     
-    g. cp -R wordpress /var/www/html/
+   ![image](https://user-images.githubusercontent.com/67065306/132990619-ac369680-fc0f-4d93-9089-311256cbb9f6.png)
+
+    g. sudo cp -R wordpress/.  /var/www/html/
+    
+    ![image](https://user-images.githubusercontent.com/67065306/132991021-aafe2f58-53d2-4dea-9b40-c689b935456d.png)
+
+     
+   7. **Configure SELinux Policies**
+
+         sudo chown -R apache:apache /var/www/html/wordpress
+         
+         sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
+         
+         sudo setsebool -P httpd_can_network_connect=1
+        
+ **Step 4 — Install MySQL on your DB Server EC2**
+ 
+           sudo yum update
+           
+           sudo yum install mysql-server
+
    
    
 
