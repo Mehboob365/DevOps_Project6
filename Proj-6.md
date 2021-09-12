@@ -327,23 +327,25 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
    
    3. **First install the epel repository.**
    
+   a. First install the epel repository
+   
           sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
    
   ![image](https://user-images.githubusercontent.com/67065306/132961299-a1664ec7-1baa-4c8d-9624-7bc7b3a202c0.png)
 
-     Next, install yum utils and enable remi-repository
+    b. Next, install yum utils and enable remi-repository
       
            sudo dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpmall
       
  ![image](https://user-images.githubusercontent.com/67065306/132986526-5a8e7d29-de5d-4c02-ac5e-82a000b99d2b.png)
 
-     Next we run the following command to see the minimal installed versions.
+    c. Next we run the following command to see the minimal installed versions.
         
         sudo dnf module list php
         
   ![image](https://user-images.githubusercontent.com/67065306/132986798-cdcae51b-66d7-49f7-b5b3-ddf8437ef8d6.png)
  
-    The output indicates that the currently installed version of PHP is PHP 7.2e.
+  d. The output indicates that the currently installed version of PHP is PHP 7.2e.
     To install the newer release, PHP 7.4 reset the PHP modules. (further details: https://www.tecmint.com/install-lemp-on-centos-8/)
 
          sudo dnf module reset php
@@ -352,8 +354,42 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
          
   ![image](https://user-images.githubusercontent.com/67065306/132987218-07f1f617-0071-4dd9-8c8c-cc980b257988.png)
 
+
+  e. Now, having reset PHP modules, enable the PHP 7.4 module by running.
+
+         sudo dnf module enable php:remi-7.4
   
   ![image](https://user-images.githubusercontent.com/67065306/132987482-714fdd86-68f7-4079-a485-fa15755a5731.png)
+  
+  f. Finally, install PHP, PHP-FPM (FastCGI Process Manager) and associated PHP modules using the command.
+    
+       sudo dnf install php php-opcache php-gd php-curl php-mysqlnd
+    
+   ![image](https://user-images.githubusercontent.com/67065306/132987823-49698046-5e44-4baa-95ae-af4af3ace427.png)
+
+  g. Run the command to check
+     
+       sudo dnf module list php
+     
+   ![image](https://user-images.githubusercontent.com/67065306/132987867-94efd853-0810-4130-aa10-fd5ec12d61ae.png)
+  
+    To check the version, run;
+    
+    php -v
+    
+   ![image](https://user-images.githubusercontent.com/67065306/132988121-5cc2e48c-7906-4494-92b7-dfa8df666b41.png)
+
+
+  h. Perfect, we now have PHP 7.4 installed. Equally important, we need to start and enable PHP-FPM on boot-up.
+
+       sudo systemctl start php-fpm
+       
+       sudo systemctl enable php-fpm
+       
+       sudo systemctl status php-fpm
+       
+    ![image](https://user-images.githubusercontent.com/67065306/132988233-e8a633b0-9ac2-4c64-b1ff-0aebf48c9a2d.png)
+
 
   
    4. Start Apache
