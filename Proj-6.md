@@ -445,7 +445,7 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
     ![image](https://user-images.githubusercontent.com/67065306/132991021-aafe2f58-53d2-4dea-9b40-c689b935456d.png)
 
      
-   7. **Configure SELinux Policies**
+   7. **Configure SELinux Policies** (not done)
 
          sudo chown -R apache:apache /var/www/html/wordpress
          
@@ -459,8 +459,45 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
            
            sudo yum install mysql-server
 
+  ![image](https://user-images.githubusercontent.com/67065306/132991397-a49c6545-4723-493f-82b4-47fb7e4f4528.png)
+
    
-   
+    We Verify that the service is up and running by using sudo systemctl status mysqld.
+    if it is not running, restart the service and enable it so it will be running even after reboot:
+
+           sudo systemctl restart mysqld
+           
+           sudo systemctl enable mysqld
+    
+    ![image](https://user-images.githubusercontent.com/67065306/132991589-8bf4ccb6-6299-41fa-84af-09419d4a81bc.png)
+    
+ 
+ **Step 5 — Configure DB to work with WordPress**
+ 
+ ![image](https://user-images.githubusercontent.com/67065306/132991890-92533081-efc6-4100-955d-af87ed41b729.png)
+ 
+      create database wordpress;
+      
+      show databases;
+      
+      CREATE USER 'wordpress'@'%' IDENTIFIED WITH mysql_native_password BY 'wordpress';
+      
+      GRANT ALL PRIVILEGES ON *.* TO 'wordpress'@'%' WITH GRANT OPTION;
+      
+      flush privileges;
+      
+      select user, host from mysql.user;
+
+ ![image](https://user-images.githubusercontent.com/67065306/132992442-bf382864-8751-465a-a93f-f0893f359eee.png)
+ 
+
+ **Step 6 — Configure WordPress to connect to remote database**
+ 
+ 
+
+
+
+
 
     
     
