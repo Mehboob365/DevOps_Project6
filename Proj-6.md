@@ -390,14 +390,56 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
        
  ![image](https://user-images.githubusercontent.com/67065306/132988233-e8a633b0-9ac2-4c64-b1ff-0aebf48c9a2d.png)
  
+ 
+ i. To instruct SELinux to allow Apache to execute the PHP code via PHP-FPM run;
 
-
+        sudo setsebool -P httpd_execmem 1
+        
+  ![image](https://user-images.githubusercontent.com/67065306/132988604-3a1e2e6a-b669-453c-94a4-606c642e14a6.png)
   
-   4. Start Apache
-   
+
+  j. Finally, restart Apache webserver for PHP to work with Apache web server.
+
+         sudo systemctl restart httpd
+         
+   ![image](https://user-images.githubusercontent.com/67065306/132988657-102076d2-e946-42c5-ab50-b5c0f4070ebd.png)
+
+5. We start Apache
+    
        sudo systemctl enable httpd
-       
+
        sudo systemctl start httpd
+ 
+       sudo systemctl status httpd
+     
+ ![image](https://user-images.githubusercontent.com/67065306/132989148-1eb595e3-d20c-4e93-a5bb-6d256410ba23.png)
+
+ Next we go to the web browser and insert the public IP and we can see apache is installed.
+ 
+ ![image](https://user-images.githubusercontent.com/67065306/132989367-afd976cc-00e4-4c65-9990-9bd8647527f5.png)
+ 
+ 6. Download wordpress and copy wordpress to var/www/html
+
+    a. mkdir wordpress
+    
+    b. cd   wordpress
+    
+    c. sudo wget http://wordpress.org/latest.tar.gz
+    
+   ![image](https://user-images.githubusercontent.com/67065306/132989735-26aa175d-3bee-4bbe-bd31-16a4e81ae93f.png)
+
+    d. sudo tar xzvf latest.tar.gz
+    
+    e. sudo rm -rf latest.tar.gz
+    
+    f. cp wordpress/wp-config-sample.php wordpress/wp-config.php
+    
+    g. cp -R wordpress /var/www/html/
+   
+   
+
+    
+    
    
    
 
