@@ -529,11 +529,22 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
 ![image](https://user-images.githubusercontent.com/67065306/132998300-2f938e79-f0b8-4374-9ffa-3d2f9cf5fb90.png)
 
 
+4. We enable TCP port 80 in Inbound Rules configuration for oour Web Server EC2 (enable from everywhere 0.0.0.0/0 or from your workstation’s IP)
 
-       
+5. We try to access from our browser the link to our WordPress http://<Web-Server-Public-IP-Address>/wordpress/
+   
+   
+  ![image](https://user-images.githubusercontent.com/67065306/133080083-062469db-d8d5-4958-85d6-1aa7c7e80166.png)
 
+  ![image](https://user-images.githubusercontent.com/67065306/133080239-e9f99713-9926-4c3b-9b04-2373ed13abcb.png)
 
+  ![image](https://user-images.githubusercontent.com/67065306/133080322-57cbe9c6-4819-40e1-baf6-e89e3005077a.png)
+  
+   ![image](https://user-images.githubusercontent.com/67065306/133079681-c7e13889-ca93-475f-8a9f-9026b9e1792e.png)
+   
+   DB credentials filled in and logged in.
 
+   ![image](https://user-images.githubusercontent.com/67065306/133079911-30dc06b7-dd31-4e73-ba80-2593ee86b6e4.png)
 
     
     
