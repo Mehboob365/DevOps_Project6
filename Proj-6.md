@@ -20,7 +20,7 @@ This part of the project will solidify our skills of deploying Web and DB tiers 
    ![image](https://user-images.githubusercontent.com/67065306/132765248-e5a9ae85-94a1-4046-a22c-68e3013e7bb4.png)
 
    
-   Create 3 volumes in the same AZ as your Web Server EC2, each of 10 GiB.
+   Create 3 volumes in the same AZ (Availability Zone)as your Web Server EC2, each of 10 GiB.
    
    ![image](https://user-images.githubusercontent.com/67065306/132765098-067d3d69-0b9c-4f30-941f-022ce324cebc.png)
 
